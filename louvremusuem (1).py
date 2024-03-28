@@ -23,12 +23,12 @@ class Artwork:#This class represents the Artwork
     @classmethod
     def display_all_names(cls): #This function dispalys all the names of the artwork
         print("Artwork Names:") #This line prints Artwork Names
-        for artwork in cls.artwork_list: #This line uses a for loop into the artwork list
+        for artwork in cls.artwork_list: #This line uses a for loop that iterates over the artwork list
             print(artwork.get_name()) #This line prints the artwork name by the getter method
     @classmethod
     def display_all_details(cls): #This function displays all the details of the artwork
         print("Artwork Details:") #This line prints Artwork Details
-        for artwork in cls.artwork_list: #This line uses a for loop into the artwork list
+        for artwork in cls.artwork_list: #This line uses a for loop that iterates over the artwork list
             print("Name:", artwork.get_name()) #This line prints the artwork name by the getter method
             print("Type:", artwork.get_artwork_type()) #This line prints the artwork type by the getter method
             print("Creator:", artwork.get_creator()) #This line prints the artwork creator by the getter method
@@ -38,7 +38,7 @@ class Artwork:#This class represents the Artwork
             print("Quantity:", artwork.get_quantity()) #This line prints the artwork quantity by the getter method
             print("Price:", artwork.get_price()) #This line prints the artwork price by the getter method
             print()
-#setter method for all attributes that can modify, getter method for all attributes that gets
+#setter method for all attributes that can modify, getter method for all attributes that retrieves
     def get_name(self):
         return self._name
 
@@ -93,7 +93,7 @@ class Gallery:#This class represents the Gallery
         self._opening_date = opening_date # This line sets the opening_date theme attribute of the Gallery object to the value passed as the opening_date parameter
         self._total_pieces = 0 # This line sets the total_pieces theme attribute of the Gallery object to the value passed as the 0 parameter
         self._total_visitors = 0 # This line sets the total_visitors theme attribute of the Gallery object to the value passed as the 0 parameter
-#setter method for all attributes that can modify, getter method for all attributes that gets
+#setter method for all attributes that can modify, getter method for all attributes that retrieves
     def set_theme(self, theme):
         self._theme = theme
 
@@ -141,7 +141,7 @@ class Location:#This class represents the location
         self._piece_collection = piece_collection # This line sets the piece_collection attribute of the location object to the value passed as the piece_collection parameter
         self._piece_gallery = piece_gallery # This line sets the piece_gallery attribute of the location object to the value passed as the piece_gallery parameter
         self._piece_exhibition = piece_exhibition # This line sets the piece_exhibition attribute of the location object to the value passed as the piece_exhibition parameter
-#setter method for all attributes that can modify, getter method for all attributes that gets
+#setter method for all attributes that can modify, getter method for all attributes that retrieves
     def set_room_number(self, room_number):
         self._room_number = room_number
 
@@ -200,7 +200,7 @@ class Exhibition:#This class represents the Exhibition
         self._fees = fees # This line sets the theme attribute of the Exhibition object to the value passed as the theme parameter
         self._total_pieces = total_pieces # This line sets the total_pieces attribute of the Exhibition object to the value passed as the total_pieces parameter
         self._total_visitors = total_visitors # This line sets the total_visitors attribute of the Exhibition object to the value passed as the total_visitors parameter
-#setter method for all attributes that can modify, getter method for all attributes that gets
+#setter method for all attributes that can modify, getter method for all attributes that retrieves
     def set_theme(self, theme):
         self._theme = theme
 
@@ -284,7 +284,7 @@ class Collection:#This class represents the collection
         self._significant_pieces = significant_pieces # This line sets the significant_pieces attribute of the collection object to the value passed as the significant_pieces parameter
         self._num_of_collections = num_of_collections # This line sets the num_of_collections attribute of the collection object to the value passed as the num_of_collections parameter
         self._total_visitors = total_visitors # This line sets the total_visitors attribute of the collection object to the value passed as the total_visitors parameter
- #setter method for all attributes that can modify, getter method for all attributes that gets
+#setter method for all attributes that can modify, getter method for all attributes that retrieves
     def set_theme(self, theme):
         self._theme = theme
 
@@ -331,7 +331,7 @@ class Employee:# This class represents the Employee
         self._schedule = schedule # This line sets the schedule attribute of the Employee object to the value passed as the schedule parameter
         self._department = department # This line sets the department attribute of the Employee object to the value passed as the department parameter
         self._employment_status = employment_status # This line sets the employment_status attribute of the Employee object to the value passed as the employment_status parameter
- #setter method for all attributes that can modify, getter method for all attributes that gets
+#setter method for all attributes that can modify, getter method for all attributes that retrieves
     def set_employee_ID(self, employee_ID):
         self._employee_ID = employee_ID
 
@@ -393,7 +393,7 @@ class Tour: #This class represents the Tour
         self._tour_guide_name = tour_guide_name # This line sets the tour_guide_name attribute of the Tour object to the value passed as the tour_guide_name parameter
         self._language_proficiency = language_proficiency # This line sets the language_proficiency attribute of the Tour object to the value passed as the language_proficiency parameter
         self._availability_schedule = availability_schedule # This line sets the availability_schedule attribute of the Tour object to the value passed as the availability_schedule parameter
- #setter method for all attributes that can modify, getter method for all attributes that gets
+#setter method for all attributes that can modify, getter method for all attributes that retrieves
     def set_type_of_tour(self, type_of_tour):
         self._type_of_tour = type_of_tour
 
@@ -464,7 +464,7 @@ class Visitor:#This class represents the Ticket
         self._ticket_num = ticket_num # This line sets the ticket_num attribute of the Visitor object to the value passed as the ticket_num parameter
         self._typeofplan = typeofplan # This line sets the typeofplan attribute of the Visitor object to the value passed as the typeofplan parameter
         self._tour = tour # This line sets the tour attribute of the Visitor object to the value passed as the tour parameter
- #setter method for all attributes that can modify, getter method for all attributes that gets
+#setter method for all attributes that can modify, getter method for all attributes that retrieves
     def set_firstname(self, firstname):
         self._firstname = firstname
 
@@ -545,17 +545,17 @@ class Visitor:#This class represents the Ticket
         print("Tour:", self._tour)
 class Ticket:#This class represents the tickets
     def __init__(self, firstname, lastname, age,ticket_num, expiration, date_of_purchase, time_of_purchase, price, typeofplan, tour):
-        self._firstname = firstname
-        self._lastname = lastname
+        self._firstname = firstname # This line sets the firstname attribute of the Ticket object to the value passed as the firstname parameter
+        self._lastname = lastname # This line sets the lastname attribute of the Ticket object to the value passed as the lastname parameter
         self._age = age # This line sets the age attribute of the Ticket object to the value passed as the age parameter
-        self._ticket_num = ticket_num
-        self._expiration = expiration
-        self._date_of_purchase = date_of_purchase
-        self._time_of_purchase = time_of_purchase
-        self._price = price # This line sets the price attribute of the Visitor object to the value passed as the price parameter
-        self._typeofplan = typeofplan
-        self._tour = tour
-
+        self._ticket_num = ticket_num # This line sets the ticket_num attribute of the Ticket object to the value passed as the ticket_num parameter
+        self._expiration = expiration # This line sets the expiration attribute of the Ticket object to the value passed as the expiration parameter
+        self._date_of_purchase = date_of_purchase # This line sets the date_of_purchase attribute of the Ticket object to the value passed as the date_of_purchase parameter
+        self._time_of_purchase = time_of_purchase # This line sets the time_of_purchase attribute of the Ticket object to the value passed as the time_of_purchase parameter
+        self._price = price # This line sets the price attribute of the Ticket object to the value passed as the price parameter
+        self._typeofplan = typeofplan # This line sets the typeofplan attribute of the Ticket object to the value passed as the typeofplan parameter
+        self._tour = tour # This line sets the tour attribute of the Ticket object to the value passed as the tour parameter
+#setter method for all attributes that can modify, getter method for all attributes that retrieves
     def set_firstname(self, firstname):
         self._firstname = firstname
 
@@ -612,7 +612,7 @@ class Ticket:#This class represents the tickets
 
     def set_tour(self, tour):
         self._tour = tour
-    def apply_pricing_logic(self):#This method applies the logic for the ticker pricing
+    def apply_pricing_logic(self):#This method applies the logic for the ticket pricing
         if self._age < 18 or self._age >= 60:  # Free tickets if they are children (age less than 18) or eldelry (age greater than 60)
             self._price = 0
         elif self._typeofplan == "Group":  # 50% discount for groups
@@ -624,13 +624,13 @@ class Ticket:#This class represents the tickets
         # Apply VAT
         self._price *= 1.05 #This line applies VAT on the ticket
 
-    def is_expired(self):
+    def is_expired(self):#This function checks if the ticket is expired
         # Assuming current_date is the current date and time
         current_date = datetime.datetime.now()
         return current_date > self._expiration
 
-    def display_ticket_information(self):
-        print("Ticket Details:")
+    def display_ticket_information(self):#This function dispalsy the ticket information
+        print("Ticket Details:") #This line prints Ticket details
         print("First Name:", self._firstname)
         print("Last Name:", self._lastname)
         print('Age:', self._age)
@@ -647,7 +647,7 @@ class Revenue:#This class represents the revenue
         self._revenue_from_tickets = revenue_from_tickets # This line sets the revenue_from_tickets attribute of the revenue object to the value passed as the revenue_from_tickets parameter
         self._revenue_from_merchandise = revenue_from_merchandise # This line sets the revenue_from_merchandise attribute of the revenue object to the value passed as the revenue_from_merchandise parameter
         self._revenue_from_donations = revenue_from_donations # This line sets the revenue_from_donations attribute of the revenue object to the value passed as the revenue_from_donations parameter
- #setter method for all attributes that can modify, getter method for all attributes that gets
+#setter method for all attributes that can modify, getter method for all attributes that retrieves
     def set_revenue_from_tickets(self, revenue):
         self._revenue_from_tickets = revenue
 
